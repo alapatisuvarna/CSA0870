@@ -1,0 +1,24 @@
+Calculate the number of days, months and years taken for you to join in college 
+from your date of birth. 
+
+Also check whether the year of date of birth or date of joining is a leap year. 
+If the years are exceeding 19, and also you have born on the leap year, then 
+print “I am lucky adult and adult means responsibility: Otherwise print “ I am 
+aspiring to become an responsible adult“
+
+Sample input: 
+Enter the date of birth: 2003 11 18
+Enter the date of joining: 2021 10 08
+
+Sample Output:
+The Gap is 18 years 11 Months and 20 Days
+Both birth and joining year is not a leap
+I am aspiring to become a responsible adult
+1.Enter the date of birth: 2023 11 18
+  Enter the date of joining: 2021 10 08
+2.Enter the date of birth: 2004 11 18
+  Enter the date of joining: 2021 10 08
+3.Enter the date of birth: 2003 11 18
+  Enter the date of joining: 2020 10 08
+4.Enter the date of birth: 2003 11 18
+  Enter the date of joining: 2021 10 
