@@ -1,0 +1,24 @@
+def mul(mat1,mat2):
+    if len(mat1[0])!=len(mat2):
+        return "Matrices cannot be multiplied"
+    result=[[0 for _ in range(len(mat2[0]))]for _ in range(len(mat1))]
+    for i in range(len(mat1)): 
+        for j in range(len(mat2[0])):
+            for k in range(len(mat2)):
+                result[i][j]+=mat1[i][k]*mat2[k][j]
+    return result
+Mat1=[
+    [1,2,],
+    [5,3,]
+]
+Mat2 = [
+    [2,3,],
+    [4,1,]
+]
+result=mul(Mat1,Mat2)
+if isinstance(result,str):
+    print(result)
+else:
+    print("Matrix Multiplication Result:")
+    for row in result:
+        print(row)
