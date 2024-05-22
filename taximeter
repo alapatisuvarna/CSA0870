@@ -1,0 +1,22 @@
+class Taximeter:
+    def calculate_fare(km_travelled):
+        if km_travelled<=1:
+            total_fare=25
+        elif km_travelled<=6:
+            total_fare=25+(km_travelled-1)*10
+        elif km_travelled <= 12:
+            total_fare=25+5*10+(km_travelled-6)*15
+        elif km_travelled<=18:
+            total_fare=25+5*10+6*15+(km_travelled-12)*20
+        else:
+            total_fare=25+5*10+6*15+6*20+(km_travelled-18)*25
+        return total_fare
+
+    def taxi_info(taxi_number,customer_name,km_travelled):
+        total_fare=Taximeter.calculate_fare(km_travelled)
+        print("Taxi Number:",taxi_number)
+        print("Customer Name:",customer_name)
+        print("Kilometers Travelled:",km_travelled)
+        print("Total Fare Charged: ₹",total_fare)
+
+Taximeter.taxi_info("TN 12 4532","HITMAN",22)
