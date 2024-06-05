@@ -1,0 +1,6 @@
+given a integer n, return the least number of perfect square number that sum to n .
+a perfect square is an integer that is the square of an integer
+import math
+def per(n):
+    return int(math.sqrt(n))
+print(per(17))    
