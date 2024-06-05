@@ -1,0 +1,3 @@
+haystack ="hello world"
+needle="world"
+print(haystack.index(needle))
