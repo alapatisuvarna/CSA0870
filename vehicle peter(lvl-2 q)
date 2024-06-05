@@ -1,0 +1,11 @@
+john has m number of vehicle . he has n children he agreed with peter to give x number of remaining 
+vehicles after distributing maximum and equal number of vehicles to the children .
+how many vehicles will peter get? also if the vehicles count as even then mr.peter is seen more lucky 
+m=10
+n=2
+vehicles_to_distribute=m-(m%n)
+peter_vehicles=(m-vehicles_to_distribute)//n
+if m%2==0:
+    print(f"you are so lucky!")
+else:
+    print(f"peter will get vehicles")
