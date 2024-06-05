@@ -1,0 +1,5 @@
+def iso(s,t):
+    return len(set(zip(s,t)))==len(set(s))==len(set(t))
+s="egg"
+t="add"
+print(iso(s,t))
