@@ -1,0 +1,4 @@
+import math
+def per(n):
+    return int(math.sqrt(n))
+print(per(17))    
