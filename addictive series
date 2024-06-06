@@ -1,0 +1,14 @@
+python program to find whether it contains an additive sequence or not
+program:
+def is_additive_sequence(sequence):
+    if len(sequence) < 3:
+        return False
+    for i in range(2, len(sequence)):
+        if sequence[i] != sequence[i-1] + sequence[i-2]:
+            return False
+    return True
+sequence = [1, 2, 3, 5, 8]  
+if is_additive_sequence(sequence):
+    print("The sequence is an additive sequence.")
+else:
+    print("The sequence is not an additive sequence.")
