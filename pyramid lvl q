@@ -1,0 +1,25 @@
+Write a Python program to find the maximum total from top to bottom of the triangle below.
+   3
+  4 6
+ 2 7 6
+8 5 9 3
+
+By starting at the top of the triangle below and moving to adjacent numbers on 
+the row below, the maximum total from top to bottom is 25.
+Explanation : 3 + 6 +7 + 9 = 25 
+ 
+Input : 
+   3
+  7 4
+ 2 4 6
+8 5 9 3
+Output : 23
+Explanation : 3 + 7 + 4 + 9 = 23 
+
+Input :
+   8
+ -4 4
+ 2 2 6
+1 1 1 1
+Output : 19
+Explanation : 8 + 4 + 6 + 1 = 19
