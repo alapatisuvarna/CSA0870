@@ -9,3 +9,11 @@ The square of the sum of the first twenty natural numbers is,
 
 Hence the difference between the sum of the squares of the first twenty natural 
 numbers and the square of the sum is 44100 - 2870 = 41230 Output: 401323300
+program:
+def sum_of_squares(n):
+    return sum(x**2 for x in range(1, n+1))
+def square_of_sum(n):
+    return sum(range(1, n+1))**2
+n = 200
+difference = square_of_sum(n) - sum_of_squares(n)
+print("Difference between the sum of squares and square of sum:", difference)
