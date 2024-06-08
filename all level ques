@@ -1,0 +1,107 @@
+LEVEL-1
+1.unicode:
+for l in range (ord('A'),ord('Z')+1):
+	print(chr(l),":",l)
+
+2.least & most significant:
+n=53145614
+least=n%10
+most=1
+while n>0:
+   most=n%10
+   n=n//10
+print("least significant number:",least)
+print("most significant number:",most)    
+
+3.mean,mode,median:
+import statistics
+data=[2,6,4,4,3]
+mean_val=statistics.mean(data)
+print("mean=",mean_val)
+mode_val=statistics.mode(data)
+print("mode=",mode_val)  
+median_val=statistics.median(data)
+print("median=",median_val)  
+
+4.prime num in array:
+def prime(n):
+	if n <= 1:
+	  return False
+	for i in range (2,int(n**0.5)+1):
+		if n%i==0:
+	  		return False
+	return True
+number=[1,3,5,2,6]
+c1,c2=0,0
+for num in number:
+	if prime(num):
+		c1=c1+1
+	else:
+		c2=c2+1
+print("prime numbers:",c1)
+print("composite numbers:",c2)
+
+LEVEL-2
+1.peak element:
+nums = [1, 2, 1, 3, 5, 6, 4]
+left, right = 0, len(nums) - 1
+while left < right:
+    mid = left + (right - left) // 2
+    if nums[mid] > nums[mid + 1]:
+        right = mid
+    else:
+        left = mid + 1
+peak_index = left
+print("Peak element index:", peak_index)
+print("Peak element value:", nums[peak_index])
+
+2.matrix mul 2/2
+matrix1=[[1,2],
+       [3,4]]
+matrix2=[[5,6],
+        [7,8]]
+result=[[0,0],
+        [0,0]]
+for i in range (2):
+	for j in range(2):
+		for k in range(2):
+			result[i][j]+=matrix1[i][k]*matrix2[k][j]
+for row in result:
+	print(row)
+
+3.days to join clg
+from datetime import date
+def age_calculator(birth):
+    today = date.today()
+    days = (today - birth).days
+    months = 0
+    years = 0
+    while days >= 365.25:
+        days -= 365.25
+        years += 1
+    while days >= 30.55:
+        days -= 30.55
+        months += 1
+    return f"You are {years} years, {months} months, and {int(days)} days old."
+user_year = int(input("Enter the year of your birth: "))
+user_month = int(input("Enter the month of your birth: "))
+user_day = int(input("Enter the day of your birth: "))
+print(age_calculator(date(user_year,user_month, user_day)))
+
+4.remove numbers:
+def Kdigits(num, k):
+    stack = []
+    for digit in num:
+        while k and stack and stack[-1] > digit:
+            stack.pop()
+            k -= 1
+        stack.append(digit)
+    return "".join(stack[:-k or None]).lstrip('0') or "0"
+num1 = "1432219"
+k1 = 3
+print(Kdigits(num1, k1))
+num2 = "10200"
+k2 = 1
+print(Kdigits(num2, k2))  
+ LEVEL-3
+1.
